@@ -1,0 +1,104 @@
+.mainBody {
+  color: #163541;
+  margin: 20px;
+  border: 3px solid #163541;
+  padding: 30px;
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1500px;
+}
+
+.header {
+  font-size: 60px;
+}
+
+form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 90px 35px;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 48px 50px;
+}
+
+.form-search {
+  padding: 6px 12px;
+  border: 0.4px solid #cacdcd;
+  border-radius: 35px;
+}
+
+.description {
+  font-size: 20px;
+  color: #6b6e6f;
+  position: absolute;
+  left: 310px;
+  top: 260px;
+  margin: 15px;
+}
+
+.currentLocation {
+  font-size: 16px;
+  color: #163541;
+  background: rgb(253, 228, 132, 0.2);
+  border: 1px solid #98999a;
+  padding: 3px 0px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 3px 3px #eeeaea;
+  transition: all 100ms ease-in-out;
+}
+
+.currentLocation:hover {
+  background: rgb(253, 228, 132, 0.5);
+  cursor: pointer;
+}
+
+.current_dt {
+  font-size: 20px;
+}
+
+.climate {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.feels {
+  font-size: 16px;
+  border: 1px solid#abaeaf;
+  padding: 3px 0px;
+  width: 100%;
+  width: 170px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.emojii_main {
+  font-size: 130px;
+  position: absolute;
+  left: 330px;
+  top: 100px;
+}
+
+.current_temp {
+  font-size: 60px;
+}
+
+.units a {
+  color: #676a6b;
+  text-decoration: none;
+}
+
+.units .active {
+  cursor: default;
+  color: #163541;
+}
+
+.units a:hover {
+  color: #163541;
+}
