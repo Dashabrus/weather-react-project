@@ -20,7 +20,6 @@ export default function Weather() {
           <h1 className="header"> {weatherData.city} </h1>
           <p className="currentdt"> {weatherData.dateTime}</p>
         </div>
-
         <div className="col-4">
           <form className="city-form">
             <input
