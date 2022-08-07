@@ -36,7 +36,7 @@ form {
   font-size: 20px;
   color: #6b6e6f;
   position: absolute;
-  left: 310px;
+  left: 320px;
   top: 260px;
   margin: 15px;
 }
@@ -61,6 +61,7 @@ form {
 
 .current_dt {
   font-size: 20px;
+  margin-left: 10px;
 }
 
 .climate {
@@ -101,6 +102,7 @@ form {
 
 .units a:hover {
   color: #163541;
+  transition: all 150ms ease-in-out;
 }
 
 .link {
@@ -108,4 +110,19 @@ form {
   margin-left: 30px;
   margin-right: 5px;
   text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.link:hover {
+  color: black;
+}
+
+.portfolioLink {
+  text-decoration: none;
+  color: rgb(210, 178, 48);
+}
+
+.portfolioLink:hover {
+  color: rgb(0, 0, 0);
+  transition: all 150ms ease-in-out;
 }

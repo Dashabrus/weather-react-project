@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Weather />
+    <Weather defaultCity="New York" />
     <div>
       <a
         href="https://github.com/Dashabrus/Weather-project"
@@ -17,7 +17,15 @@ root.render(
       >
         Open-source code
       </a>
-      by Dasha Brus
+      by{" "}
+      <a
+        href="https://heroic-sfogliatella-9cf955.netlify.app/"
+        target="_blank"
+        rel="noreferrer"
+        className="portfolioLink"
+      >
+        Dasha Brus
+      </a>
     </div>
   </React.StrictMode>
 );
