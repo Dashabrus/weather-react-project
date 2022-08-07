@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Weather defaultCity="New York" />
+    <Weather defaultCity="Dnipro" />
     <div>
       <a
         href="https://github.com/Dashabrus/Weather-project"

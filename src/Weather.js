@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./weather.css";
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
+import DateTime from "./DateTime";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -10,7 +11,7 @@ export default function Weather(props) {
       ready: true,
       temperature: Math.round(responce.data.main.temp),
       hum: responce.data.main.humidity,
-      dateTime: "Thursday, 12:54",
+      dateTime: new Date(responce.data.dt * 1000),
       mainEmojii: "☁️",
       description:
         responce.data.weather[0].description.charAt(0).toUpperCase() +
@@ -24,7 +25,10 @@ export default function Weather(props) {
         <div className="row justify-content-between">
           <div className="col-8">
             <h1 className="header"> {props.defaultCity} </h1>
-            <p className="current_dt"> {weatherData.dateTime}</p>
+            <p>
+              {" "}
+              <DateTime date={weatherData.dateTime} className="current_dt" />
+            </p>
           </div>
           <div className="col-4">
             <form className="city-form">
