@@ -4,6 +4,7 @@ import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
 import DateTime from "./DateTime";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemp from "./WeatherTemp";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -67,16 +68,7 @@ export default function Weather(props) {
         </div>
         <div className="row">
           <div className="col-7">
-            <div className="current_temp">
-              {weatherData.temperature}
-              <span className="units">
-                <a href="/" className="active">
-                  °C
-                </a>
-                &#124;
-                <a href="/">°F</a>
-              </span>
-            </div>
+            <WeatherTemp celsius={weatherData.temperature} />
             <p className="emojii_main">
               {" "}
               <WeatherIcon code={weatherData.mainEmojii} />
