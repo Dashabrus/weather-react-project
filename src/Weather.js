@@ -3,6 +3,7 @@ import "./weather.css";
 import axios from "axios";
 import ClipLoader from "react-spinners/ClipLoader";
 import DateTime from "./DateTime";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -29,7 +30,7 @@ export default function Weather(props) {
       temperature: Math.round(responce.data.main.temp),
       hum: responce.data.main.humidity,
       dateTime: new Date(responce.data.dt * 1000),
-      mainEmojii: "☁️",
+      mainEmojii: responce.data.weather[0].icon,
       description:
         responce.data.weather[0].description.charAt(0).toUpperCase() +
         responce.data.weather[0].description.slice(1),
@@ -76,7 +77,10 @@ export default function Weather(props) {
                 <a href="/">°F</a>
               </span>
             </div>
-            <p className="emojii_main"> {weatherData.mainEmojii}</p>
+            <p className="emojii_main">
+              {" "}
+              <WeatherIcon code={weatherData.mainEmojii} />
+            </p>
             <div className="description">"{weatherData.description}"</div>
             <div className="feels">Feels like {weatherData.feels}°C</div>
           </div>
