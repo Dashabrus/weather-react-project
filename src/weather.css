@@ -70,6 +70,7 @@ form {
 }
 
 .feels {
+  margin-bottom: 30px;
   font-size: 16px;
   border: 1px solid#abaeaf;
   padding: 3px 0px;
@@ -125,4 +126,24 @@ form {
 .portfolioLink:hover {
   color: rgb(0, 0, 0);
   transition: all 150ms ease-in-out;
+}
+
+.hl {
+  margin: 0px 13px 30px;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.emojii {
+  display: block;
+  margin: 0 auto;
+  font-size: 45px;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.card {
+  width: 8rem;
 }

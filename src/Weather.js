@@ -5,6 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import DateTime from "./DateTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -37,6 +38,9 @@ export default function Weather(props) {
         responce.data.weather[0].description.slice(1),
       windSpeed: Math.round(responce.data.wind.speed),
       city: responce.data.name,
+      feels: Math.round(responce.data.main.feels_like),
+      highest: Math.round(responce.data.main.temp_max),
+      lowest: Math.round(responce.data.main.temp_min),
     });
   }
 
@@ -74,6 +78,9 @@ export default function Weather(props) {
               <WeatherIcon code={weatherData.mainEmojii} />
             </p>
             <div className="description">"{weatherData.description}"</div>
+            <div className="hl">
+              H:{weatherData.highest} | L:{weatherData.lowest}
+            </div>
             <div className="feels">Feels like {weatherData.feels}°C</div>
           </div>
           <div className="col-5 climate mb-2 mt-4">
@@ -81,6 +88,9 @@ export default function Weather(props) {
             <br />
             <span>Humidity: {weatherData.hum}%</span>
           </div>
+        </div>
+        <div class="container">
+          <WeatherForecast />
         </div>
       </div>
     );
