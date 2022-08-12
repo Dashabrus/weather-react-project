@@ -28,6 +28,7 @@ export default function Weather(props) {
 
   function handleResponce(responce) {
     setWeatherData({
+      coord: responce.data.coord,
       ready: true,
       temperature: Math.round(responce.data.main.temp),
       hum: responce.data.main.humidity,
@@ -50,10 +51,10 @@ export default function Weather(props) {
         <div className="row justify-content-between">
           <div className="col-8">
             <h1 className="header"> {weatherData.city} </h1>
-            <p>
+            <span>
               {" "}
               <DateTime date={weatherData.dateTime} className="current_dt" />
-            </p>
+            </span>
           </div>
           <div className="col-4">
             <form className="city-form" onSubmit={handleSubmit}>
@@ -73,10 +74,10 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-7">
             <WeatherTemp celsius={weatherData.temperature} />
-            <p className="emojii_main">
+            <span className="emojii_main">
               {" "}
               <WeatherIcon code={weatherData.mainEmojii} />
-            </p>
+            </span>
             <div className="description">"{weatherData.description}"</div>
             <div className="hl">
               H:{weatherData.highest} | L:{weatherData.lowest}
@@ -89,8 +90,8 @@ export default function Weather(props) {
             <span>Humidity: {weatherData.hum}%</span>
           </div>
         </div>
-        <div class="container">
-          <WeatherForecast />
+        <div className="container">
+          <WeatherForecast coord={weatherData.coord} />
         </div>
       </div>
     );
@@ -102,6 +103,8 @@ export default function Weather(props) {
       marginTop: "90px",
     };
 
-    return <ClipLoader color={"#163541"} cssOverride={override} size={"150"} />;
+    return (
+      <ClipLoader color={"#163541"} cssOverride={override} size={"150px"} />
+    );
   }
 }

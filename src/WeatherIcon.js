@@ -21,5 +21,5 @@ export default function WeatherIcon(props) {
     "13d": "❄️",
     "13n": "❄️",
   };
-  return <p>{codeMapping[props.code]}</p>;
+  return <span>{codeMapping[props.code]}</span>;
 }
