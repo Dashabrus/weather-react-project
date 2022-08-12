@@ -1,8 +1,7 @@
-import axios from "axios";
 import React, { useState } from "react";
-import WeatherForecastDay from "./WeatherForecastDay";
+import axios from "axios";
 
-export default function WeatherForecast(props) {
+export default function HighestLowestTemp(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
@@ -12,11 +11,13 @@ export default function WeatherForecast(props) {
   }
 
   if (loaded) {
+    console.log(forecast);
     return (
-      <div className="row">
-        <div className="col">
-          <WeatherForecastDay data={forecast[1]} />
-        </div>{" "}
+      <div>
+        <div className="hl">
+          H:{Math.round(forecast[0].temp.max)} | L:
+          {Math.round(forecast[0].temp.min)}
+        </div>
       </div>
     );
   } else {

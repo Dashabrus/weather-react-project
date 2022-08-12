@@ -6,6 +6,7 @@ import DateTime from "./DateTime";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemp from "./WeatherTemp";
 import WeatherForecast from "./WeatherForecast";
+import HighestLowestTemp from "./HighestLowestTemp";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -79,9 +80,7 @@ export default function Weather(props) {
               <WeatherIcon code={weatherData.mainEmojii} />
             </span>
             <div className="description">"{weatherData.description}"</div>
-            <div className="hl">
-              H:{weatherData.highest} | L:{weatherData.lowest}
-            </div>
+            <HighestLowestTemp coord={weatherData.coord} />
             <div className="feels">Feels like {weatherData.feels}°C</div>
           </div>
           <div className="col-5 climate mb-2 mt-4">
