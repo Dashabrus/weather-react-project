@@ -67,9 +67,6 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </form>
-            <span className="page">
-              <button className="currentLocation">📍 Location</button>
-            </span>
           </div>
         </div>
         <div className="row">

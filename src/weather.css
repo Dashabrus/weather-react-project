@@ -16,14 +16,7 @@ form {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 90px 35px;
-}
-
-.page {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 48px 50px;
+  margin: 45px 35px;
 }
 
 .form-search {
