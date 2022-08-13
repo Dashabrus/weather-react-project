@@ -11,7 +11,6 @@ export default function HighestLowestTemp(props) {
   }
 
   if (loaded) {
-    console.log(forecast);
     return (
       <div>
         <div className="hl">
