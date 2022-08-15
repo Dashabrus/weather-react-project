@@ -10,7 +10,7 @@ root.render(
     <Weather defaultCity="Dnipro" />
     <div>
       <a
-        href="https://github.com/Dashabrus/Weather-project"
+        href="https://github.com/Dashabrus/weather-react-project"
         target="_blank"
         rel="noreferrer"
         className="link"
