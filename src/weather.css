@@ -16,7 +16,7 @@ form {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 45px 35px;
+  margin: 90px 35px;
 }
 
 .form-search {
@@ -139,4 +139,11 @@ form {
 
 .card {
   width: 8rem;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 48px 50px;
 }

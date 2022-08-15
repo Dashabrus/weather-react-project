@@ -11,6 +11,7 @@ import HighestLowestTemp from "./HighestLowestTemp";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [apiUrl, setApiUrl] = useState();
 
   function search() {
     const apiKey = "6a809824c32cedbbe5da28815dd90f96";
@@ -58,6 +59,9 @@ export default function Weather(props) {
             </span>
           </div>
           <div className="col-4">
+            <span className="page">
+              <button className="currentLocation">📍 Location</button>
+            </span>
             <form className="city-form" onSubmit={handleSubmit}>
               <input
                 type="text"
