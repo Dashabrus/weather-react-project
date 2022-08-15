@@ -11,10 +11,9 @@ import HighestLowestTemp from "./HighestLowestTemp";
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [apiUrl, setApiUrl] = useState();
+  const apiKey = "6a809824c32cedbbe5da28815dd90f96";
 
   function search() {
-    const apiKey = "6a809824c32cedbbe5da28815dd90f96";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponce);
   }
@@ -22,6 +21,14 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
+  }
+
+  function handlePosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition((position) => {
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
+      axios.get(apiUrl).then(handleResponce);
+    });
   }
 
   function handleCityChange(event) {
@@ -60,7 +67,9 @@ export default function Weather(props) {
           </div>
           <div className="col-4">
             <span className="page">
-              <button className="currentLocation">📍 Location</button>
+              <button className="currentLocation" onClick={handlePosition}>
+                📍 Location
+              </button>
             </span>
             <form className="city-form" onSubmit={handleSubmit}>
               <input
