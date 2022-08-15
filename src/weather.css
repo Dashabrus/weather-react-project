@@ -14,9 +14,8 @@
 
 form {
   position: absolute;
-  top: 0;
-  right: 0;
-  margin: 90px 35px;
+  top: 90px;
+  right: 35px;
 }
 
 .form-search {
@@ -146,4 +145,62 @@ form {
   top: 0;
   right: 0;
   margin: 48px 50px;
+}
+
+@media (max-width: 576px) {
+  .header {
+    font-size: 38px;
+    margin-top: 85px;
+  }
+  .current_dt {
+    font-size: 15px;
+  }
+  .current_temp {
+    font-size: 35px;
+  }
+  .hl {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  .climate {
+    text-align: right;
+    font-size: 15px;
+    position: absolute;
+    left: -42px;
+    top: 290px;
+  }
+  .feels {
+    margin: 3px 0px 10px;
+    font-size: 16px;
+    width: 100%;
+    width: 170px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  .emojii_main {
+    font-size: 80px;
+    position: absolute;
+    left: 260px;
+    top: 140px;
+  }
+  .description {
+    font-size: 16px;
+    position: absolute;
+    left: 220px;
+    top: 225px;
+    margin: 15px;
+  }
+  .currentLocation {
+    font-size: 15px;
+    margin: 0 auto;
+  }
+  form {
+    position: absolute;
+    top: 90px;
+    left: 35px;
+  }
+  .form-search {
+    padding: 6px 150px 6px 12px;
+    text-align: left;
+  }
 }

@@ -93,7 +93,7 @@ export default function Weather(props) {
             <HighestLowestTemp coord={weatherData.coord} />
             <div className="feels">Feels like {weatherData.feels}°C</div>
           </div>
-          <div className="col-5 climate mb-2 mt-4">
+          <div className="col-sm-5 climate mb-2 mt-sm-4">
             <span>Wind: {weatherData.windSpeed} km/h</span>
             <br />
             <span>Humidity: {weatherData.hum}%</span>
