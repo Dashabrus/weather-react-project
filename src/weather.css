@@ -166,7 +166,7 @@ form {
     text-align: right;
     font-size: 15px;
     position: absolute;
-    left: -42px;
+    left: -20px;
     top: 290px;
   }
   .feels {
@@ -200,7 +200,7 @@ form {
     left: 35px;
   }
   .form-search {
-    padding: 6px 150px 6px 12px;
+    width: 100%;
     text-align: left;
   }
 }
